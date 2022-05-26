@@ -10,7 +10,7 @@ public class Turrel : MonoBehaviour
     [SerializeField] Transform _GunFirst;
     [SerializeField] Transform _GunSecond;
     [SerializeField] float _timeShoot = 1f;
-    float _force = 1000;
+    float _force = 1500;
     Quaternion _DefaultRotation;
     bool detection;
 

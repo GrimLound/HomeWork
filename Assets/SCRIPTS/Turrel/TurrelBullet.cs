@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class TurrelBullet : MonoBehaviour
 {
+    float _damage = 15f;
     private void Start()
     {
         StartCoroutine(Delete());
@@ -12,6 +13,8 @@ public class TurrelBullet : MonoBehaviour
     {
         if(other.gameObject.tag == "Player")
         {
+            other.GetComponent<PlayerHealth>().GetDamage(_damage);
+            other.GetComponent<SoundsEffects>().GetDamageSound();
             Destroy(gameObject);
         }
     }
